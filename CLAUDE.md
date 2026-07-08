@@ -11,6 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `硅基经济学-大纲讨论.md` — 定稿大纲，章节主题与论点的唯一权威来源（导论 + 5 部分 12 章 + 尾声）
 - `00-导论.md`、`01-第一章-*.md` … — 正文，按两位数编号排序
 - `.claude/skills/book-writing-style/SKILL.md` — 写作风格规范 + 章节形态登记表 + 跨章埋线清单
+- `素材-第九章-A2A实录.md` — 第 9 章一手素材（2026-07-08 支付宝 A2A 实测快照，含脱敏与时效性要求）
 
 ## 写作工作流（每章必须走完）
 
@@ -28,4 +29,4 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 当前进度
 
-导论与第 1-8 章成稿（第一、二部分完整，第三部分完成 2/3）。第九章「微观自治市场」等待用户提供 A2A/支付宝一手素材，计划为全书最长章。未动笔：第 9-12 章、尾声。
+导论与第 1-9 章成稿（第一、二、三部分完整）。第 9 章基于作者支付宝 A2A 一手实测写成，其"第一笔真实交易"仍在等待发生——素材文件待补清单里若有新事实（如首笔真实成交），可回头升级第 9 章结尾与尾声。未动笔：第 10-12 章、尾声。
