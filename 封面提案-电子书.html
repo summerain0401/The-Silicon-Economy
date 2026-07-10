@@ -1,0 +1,328 @@
+<title>《硅基经济学》封面提案</title>
+<style>
+  :root{
+    --bg:#F5F4F1; --ink:#1C1D1F; --muted:#6E6F73; --line:#D9D8D4; --accent:#B4632C;
+    --card:#FFFFFF; --code-bg:#EDECE8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#17181A; --ink:#E8E7E4; --muted:#9A9B9E; --line:#333436; --card:#1F2022; --code-bg:#222326; }
+  }
+  :root[data-theme="dark"]{ --bg:#17181A; --ink:#E8E7E4; --muted:#9A9B9E; --line:#333436; --card:#1F2022; --code-bg:#222326; }
+  :root[data-theme="light"]{ --bg:#F5F4F1; --ink:#1C1D1F; --muted:#6E6F73; --line:#D9D8D4; --card:#FFFFFF; --code-bg:#EDECE8; }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+    margin:0; padding:48px 24px 80px; line-height:1.7;
+  }
+  .wrap{max-width:1120px; margin:0 auto}
+  header{margin-bottom:16px; max-width:680px}
+  .eyebrow{font-size:12px; letter-spacing:.18em; color:var(--muted); text-transform:uppercase; margin-bottom:12px}
+  h1{
+    font-family:"Songti SC","Noto Serif SC",serif; font-weight:700;
+    font-size:clamp(26px,4vw,36px); margin:0 0 12px; text-wrap:balance;
+  }
+  header p{color:var(--muted); font-size:15px; margin:0}
+  .spec{
+    display:flex; flex-wrap:wrap; gap:8px 24px; margin:20px 0 48px; padding:14px 18px;
+    background:var(--card); border:1px solid var(--line); border-radius:8px;
+    font-size:13px; color:var(--muted); max-width:680px;
+  }
+  .spec b{color:var(--ink); font-weight:600}
+
+  .proposal{ margin-bottom:88px; }
+  .proposal-grid{ display:grid; grid-template-columns:minmax(300px,420px) 1fr; gap:40px; align-items:start; }
+  @media (max-width:760px){ .proposal-grid{ grid-template-columns:1fr; } }
+
+  .item h2{
+    font-family:"Songti SC","Noto Serif SC",serif; font-size:22px; font-weight:700;
+    margin:0 0 6px;
+  }
+  .item h2 span{color:var(--accent); font-family:ui-monospace,Menlo,monospace; font-size:14px; margin-right:10px; letter-spacing:.08em}
+  .item > p{font-size:14px; color:var(--muted); margin:0 0 20px}
+
+  .detail h3{ font-size:13px; letter-spacing:.12em; color:var(--muted); text-transform:uppercase; margin:26px 0 8px; font-weight:600 }
+  .detail ul{ margin:0; padding-left:20px; font-size:14px; color:var(--ink) }
+  .detail li{ margin-bottom:6px }
+  .detail li b{ font-weight:600 }
+
+  .prompt{
+    background:var(--code-bg); border:1px solid var(--line); border-radius:8px;
+    padding:16px 18px; font-family:ui-monospace,Menlo,monospace; font-size:12.5px;
+    line-height:1.8; color:var(--ink); white-space:pre-wrap; word-break:break-word;
+    overflow-x:auto;
+  }
+  .prompt + .prompt{ margin-top:10px }
+  .prompt .tag{ display:block; font-size:10px; letter-spacing:.18em; color:var(--accent); margin-bottom:6px; font-family:inherit }
+
+  /* ebook 2:3 */
+  .cover{
+    aspect-ratio: 2/3; width:100%; border-radius:4px; overflow:hidden; position:relative;
+    box-shadow:0 1px 2px rgba(0,0,0,.12), 0 16px 40px rgba(0,0,0,.16);
+  }
+  .thumb-note{ font-size:12px; color:var(--muted); margin-top:10px; text-align:center }
+
+  /* ── A: 402 协议碑 ─────────────────────── */
+  .c1{ background:radial-gradient(120% 90% at 50% 30%, #151B21 0%, #0D1115 70%); color:#E9EAEA; display:flex; flex-direction:column; padding:8.5%; }
+  .c1 .proto{ font-family:ui-monospace,Menlo,monospace; font-size:clamp(8px,1.05vw,11px); color:#7C8894; letter-spacing:.06em; border-bottom:1px solid #2A3138; padding-bottom:12px; line-height:2 }
+  .c1 .proto b{ color:#B9C2CA; font-weight:400 }
+  .c1 .num{
+    flex:1; display:flex; align-items:center; justify-content:center; position:relative;
+    font-family:ui-monospace,Menlo,monospace; font-weight:700;
+    font-size:clamp(110px,17vw,190px); letter-spacing:-.04em; color:#F2F1EC;
+  }
+  .c1 .num em{ color:#C87832; font-style:normal; text-shadow:0 0 70px rgba(200,120,50,.4) }
+  .c1 .num .cursor{
+    position:absolute; bottom:14%; right:4%; width:.5em; height:.09em; background:#C87832;
+    font-size:clamp(14px,2vw,20px); animation:blink 1.2s steps(1) infinite;
+  }
+  @keyframes blink{ 50%{opacity:0} }
+  @media (prefers-reduced-motion: reduce){ .c1 .num .cursor{ animation:none } }
+  .c1 .foot{ border-top:1px solid #2A3138; padding-top:16px; }
+  .c1 .title{ font-family:"Songti SC","Noto Serif SC",serif; font-size:clamp(30px,4.4vw,48px); font-weight:700; letter-spacing:.18em }
+  .c1 .subrow{ display:flex; justify-content:space-between; margin-top:10px; font-family:ui-monospace,Menlo,monospace; font-size:clamp(7px,1vw,10px); color:#7C8894; letter-spacing:.1em }
+
+  /* ── B: 一条不起眼的通知 ────────────────── */
+  .c2{ background:linear-gradient(178deg,#E9ECF0 0%,#DFE3E9 48%,#CFD6DE 100%); color:#23272D; display:flex; flex-direction:column; padding:8.5%; }
+  .c2 .clock{ text-align:center; margin-top:4%; }
+  .c2 .clock .t{ font-size:clamp(40px,6.5vw,68px); font-weight:200; letter-spacing:.02em; color:#3A404A; font-variant-numeric:tabular-nums }
+  .c2 .clock .d{ font-size:clamp(9px,1.2vw,12px); color:#8C929B; letter-spacing:.14em; margin-top:2px }
+  .c2 .notif{
+    margin-top:9%; background:rgba(255,255,255,.94); border-radius:14px; padding:5.5% 6.5%;
+    box-shadow:0 8px 28px rgba(40,50,70,.16); font-size:clamp(9px,1.3vw,13px);
+  }
+  .c2 .notif .app{ display:flex; align-items:center; gap:6px; color:#8C929B; font-size:.8em; margin-bottom:7px }
+  .c2 .notif .dot{ width:1em; height:1em; border-radius:3.5px; background:#2E6BD6; flex:none }
+  .c2 .notif strong{ display:block; font-weight:600; margin-bottom:2px; font-size:1.05em }
+  .c2 .notif span{ color:#5A6068 }
+  .c2 .ghost{ margin-top:11px; background:rgba(255,255,255,.5); border-radius:14px; height:3em }
+  .c2 .ghost2{ margin-top:9px; background:rgba(255,255,255,.3); border-radius:14px; height:2.5em }
+  .c2 .foot{ margin-top:auto }
+  .c2 .title{ font-family:"Songti SC","Noto Serif SC",serif; font-size:clamp(34px,5vw,54px); font-weight:700; letter-spacing:.12em; margin-bottom:8px }
+  .c2 .sub{ font-size:clamp(8px,1.1vw,11.5px); color:#6E747D; letter-spacing:.04em; max-width:26em }
+  .c2 .author{ font-size:clamp(8px,1.1vw,11px); color:#8C929B; margin-top:12px; letter-spacing:.2em }
+
+  /* ── C: 两层经济 ───────────────────────── */
+  .c3{ background:#EFEAE2; display:flex; flex-direction:column; }
+  .c3 .upper{ flex:1.15; padding:9% 8.5% 7%; color:#2B2822; display:flex; flex-direction:column;
+    background:
+      radial-gradient(80% 60% at 20% 0%, rgba(255,255,255,.5), transparent 60%),
+      #EFEAE2;
+  }
+  .c3 .upper .label{ font-size:clamp(8px,1vw,10px); letter-spacing:.34em; color:#9B937F }
+  .c3 .upper .title{ font-family:"Songti SC","Noto Serif SC",serif; font-size:clamp(44px,7vw,76px); font-weight:700; letter-spacing:.1em; margin-top:auto; line-height:1.28 }
+  .c3 .upper .sub{ font-size:clamp(8px,1.1vw,11.5px); color:#6E675A; margin-top:12px; letter-spacing:.05em }
+  .c3 .seam{ height:2px; background:linear-gradient(90deg,#C87832 0%,#8A5220 60%,#C87832 100%); flex:none }
+  .c3 .lower{ flex:1; background:#14181D; position:relative; overflow:hidden; padding:6% 8.5%; }
+  .c3 .stream{
+    font-family:ui-monospace,Menlo,monospace; font-size:clamp(6px,.85vw,9px); line-height:2.15;
+    color:#39434D; word-break:break-all; user-select:none;
+  }
+  .c3 .stream b{ color:#C87832; font-weight:400 }
+  .c3 .lower .label{ position:absolute; right:8.5%; bottom:6%; font-size:clamp(8px,1vw,10px); letter-spacing:.34em; color:#4E5862 }
+  .c3 .lower::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(20,24,29,0) 55%, rgba(20,24,29,.85) 100%);
+    pointer-events:none;
+  }
+
+  /* ── D: 机器报价单 ─────────────────────── */
+  .c4{ background:
+        radial-gradient(100% 80% at 50% 20%, #E2D3AF 0%, #D3C093 70%, #C6B180 100%);
+      display:flex; flex-direction:column; align-items:center; padding:9% 0 8%; }
+  .c4 .tag{
+    width:70%; background:#F6EFDF; border-radius:7px; padding:6.5% 6.5% 5.5%;
+    box-shadow:0 3px 8px rgba(60,45,15,.18), 0 14px 34px rgba(60,45,15,.28);
+    position:relative; transform:rotate(-2deg);
+  }
+  .c4 .hole{ width:15px; height:15px; border-radius:50%; background:#D3C093; box-shadow:inset 0 1px 3px rgba(60,45,15,.4); position:absolute; top:4.5%; left:50%; transform:translateX(-50%) }
+  .c4 .string{
+    position:absolute; top:-9%; left:50%; width:1.5px; height:10%;
+    background:#A08A5C; transform-origin:bottom; transform:translateX(-50%) rotate(14deg);
+  }
+  .c4 .row{ display:flex; justify-content:space-between; gap:8px; font-family:ui-monospace,Menlo,monospace; font-size:clamp(7px,1vw,10.5px); color:#7A6E52; padding:8px 0; border-bottom:1px dashed #CBBD97 }
+  .c4 .row b{ color:#3A3325; font-weight:600; text-align:right }
+  .c4 .amount{ text-align:center; padding:9% 0 7%; }
+  .c4 .amount .n{ font-family:ui-monospace,Menlo,monospace; font-size:clamp(32px,5vw,52px); font-weight:700; color:#2E2818; letter-spacing:-.02em }
+  .c4 .amount .u{ font-family:ui-monospace,Menlo,monospace; font-size:clamp(7px,1vw,10px); color:#8C7F60; letter-spacing:.22em; margin-top:6px }
+  .c4 .below{ margin-top:auto; text-align:center; padding-top:7% }
+  .c4 .title{ font-family:"Songti SC","Noto Serif SC",serif; font-size:clamp(30px,4.6vw,50px); font-weight:700; letter-spacing:.2em; color:#2E2818 }
+  .c4 .sub{ font-size:clamp(8px,1.05vw,11px); color:#776A4B; letter-spacing:.14em; margin-top:8px }
+
+  .note{ margin-top:24px; padding-top:24px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; max-width:680px }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Cover Proposals · Refined · E-book Edition</div>
+    <h1>《硅基经济学》封面细化稿</h1>
+    <p>四个方向全部细化为电子书规格，每案附可直接使用的 AI 生图提示词。作者署名以"□□□"占位。</p>
+  </header>
+
+  <div class="spec">
+    <span>比例 <b>2 : 3</b>（电子书通用，出图按 1600 × 2400 px）</span>
+    <span>缩略图优先 <b>书名在 120px 宽下仍可读</b></span>
+    <span>无书脊/封底 <b>仅单封面</b></span>
+  </div>
+
+  <!-- ═══════════ A ═══════════ -->
+  <div class="proposal item">
+    <h2><span>方案 A</span>协议碑</h2>
+    <p>整本书从一个沉睡三十年的状态码开始——让它自己站上封面。细化：402 放大到近满幅，"0"独占铜色与光晕（三个数字里被唤醒的那一位）；顶部响应头加了 <code>X-Dormant: 30 years</code> 的自定义字段；右下角一枚闪烁的终端光标——协议还活着，等下一个请求。</p>
+    <div class="proposal-grid">
+      <div>
+        <div class="cover c1">
+          <div class="proto">HTTP/1.1 <b>402 Payment Required</b><br>X-Dormant: 30 years<br>X-Status: <b>awake</b></div>
+          <div class="num">4<em>0</em>2<span class="cursor"></span></div>
+          <div class="foot">
+            <div class="title">硅基经济学</div>
+            <div class="subrow"><span>THE SILICON ECONOMY</span><span>□□□ 著</span></div>
+          </div>
+        </div>
+        <div class="thumb-note">深底白字，缩略图下 402 与书名双锚点</div>
+      </div>
+      <div class="detail">
+        <h3>细化要点</h3>
+        <ul>
+          <li><b>字号层级</b>：402 占版心约 55%，书名升到 48px 级——两个元素在手机书架缩略图下都能认出</li>
+          <li><b>唯一彩色</b>：全封面只有"0"和光标用电路铜（#C87832），其余为墨蓝黑 + 灰白，克制到冷</li>
+          <li><b>电子书特有</b>：光标闪烁只存在于动态预览场景；静态出图时保留光标常亮即可</li>
+        </ul>
+        <h3>生图提示词（底图，文字后期加）</h3>
+        <div class="prompt"><span class="tag">MIDJOURNEY / 通用英文</span>minimalist book cover background, giant monospace number "402" carved like a monument on deep ink-blue-black ground (#0D1115), the middle digit "0" glowing in circuit-copper orange (#C87832) with a soft halo, subtle terminal scanline texture, thin grey horizontal rules at top and bottom like HTTP header dividers, vast negative space, brutalist typography poster style, no other objects, no gradients except the copper glow --ar 2:3 --style raw</div>
+        <div class="prompt"><span class="tag">中文工具（即梦/通义万相）</span>极简主义书籍封面底图，深墨蓝黑色背景上一个巨大的等宽字体数字"402"，如纪念碑般居中矗立，中间的"0"发出电路铜橙色的微光，顶部和底部各有一条细灰色分隔线，大量留白，粗野主义排版海报风格，无其他元素，比例 2:3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ B ═══════════ -->
+  <div class="proposal item">
+    <h2><span>方案 B</span>一条不起眼的通知</h2>
+    <p>首尾呼应句的直接图像化。细化：改成完整的锁屏语法——大字时钟 06:00 在上，通知卡片居中（文案即尾声那笔真实到账的推送格式），下方两张半透明"幽灵卡片"暗示它混在快递和天气预警之间，毫不特殊。书名字号加大一档，副题用原句。</p>
+    <div class="proposal-grid">
+      <div>
+        <div class="cover c2">
+          <div class="clock">
+            <div class="t">06:00</div>
+            <div class="d">7月9日 星期四</div>
+          </div>
+          <div class="notif">
+            <div class="app"><span class="dot"></span>支付通知 · 现在</div>
+            <strong>收款金额 ¥0.01</strong>
+            <span>今日第 1 笔收入，共计 ¥0.01</span>
+          </div>
+          <div class="ghost"></div>
+          <div class="ghost2"></div>
+          <div class="foot">
+            <div class="title">硅基经济学</div>
+            <div class="sub">新的经济纪元不敲门——它只会变成你手机上一条不起眼的通知。</div>
+            <div class="author">□□□ 著</div>
+          </div>
+        </div>
+        <div class="thumb-note">缩略图下时钟与书名形成上下双锚点</div>
+      </div>
+      <div class="detail">
+        <h3>细化要点</h3>
+        <ul>
+          <li><b>锁屏语法</b>：清晨 06:00 的超细体时钟——书里她"早上六点醒来"的那一刻，读者一眼认出这是自己的手机</li>
+          <li><b>信息层级</b>：真通知实、假通知虚（两张幽灵卡），"不起眼"由排版直接演出来</li>
+          <li><b>色彩纪律</b>：全封面唯一饱和色是通知图标的支付蓝，连书名都是墨色——克制即主题</li>
+        </ul>
+        <h3>生图提示词（底图，文字后期加）</h3>
+        <div class="prompt"><span class="tag">MIDJOURNEY / 通用英文</span>serene book cover background, early morning phone lock screen aesthetic, soft grey-blue gradient like 6am winter light (#E9ECF0 to #CFD6DE), one crisp white notification card floating in upper third with soft shadow, two faded translucent ghost cards below it, extreme minimalism, calm and quiet mood, large empty space in lower half for typography, flat design, no phone frame, no hands --ar 2:3 --style raw</div>
+        <div class="prompt"><span class="tag">中文工具（即梦/通义万相）</span>安静的书籍封面底图，清晨六点的手机锁屏氛围，灰蓝色柔和渐变背景如冬日晨光，画面上三分之一处漂浮一张白色通知卡片带柔和投影，其下两张半透明的模糊卡片，极简扁平风格，下半部大量留白供排版，无手机边框，无人物，比例 2:3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ C ═══════════ -->
+  <div class="proposal item">
+    <h2><span>方案 C</span>两层经济</h2>
+    <p>全书核心空间隐喻。细化：上下层交界处加了一条 2px 的电路铜"接缝"——两个世界的结算接口；书名放大到 76px 级压住上层；下层流水加了向下渐隐，暗示这条河比画面更深；流水里的 402 和 ¥0.01 用铜色点亮，像暗河里偶尔可见的鱼。</p>
+    <div class="proposal-grid">
+      <div>
+        <div class="cover c3">
+          <div class="upper">
+            <div class="label">碳基 · CARBON</div>
+            <div class="title">硅基<br>经济学</div>
+            <div class="sub">人类在上层过日子，机器在下层结算 · □□□ 著</div>
+          </div>
+          <div class="seam"></div>
+          <div class="lower">
+            <div class="stream" id="stream"></div>
+            <div class="label">硅基 · SILICON</div>
+          </div>
+        </div>
+        <div class="thumb-note">明暗对切在缩略图下依然醒目</div>
+      </div>
+      <div class="detail">
+        <h3>细化要点</h3>
+        <ul>
+          <li><b>铜色接缝</b>：上下两层的交界不再是生硬的切线，而是一条发亮的结算接口——全书讲的就是这条缝</li>
+          <li><b>可读性梯度</b>：上层字大而疏（人类的阅读节奏），下层字小而密（机器的结算密度），版面本身就是论点</li>
+          <li><b>渐隐处理</b>：流水底部渐入黑暗，"看不见，但规模未必小"</li>
+        </ul>
+        <h3>生图提示词（底图，文字后期加）</h3>
+        <div class="prompt"><span class="tag">MIDJOURNEY / 通用英文</span>book cover background split horizontally into two worlds: upper 55% warm paper cream texture (#EFEAE2) with soft natural light, lower 45% deep charcoal-navy (#14181D) filled with dense micro-rows of tiny monospace numbers and transaction codes fading into darkness at the bottom, the two layers separated by a single thin glowing copper seam line, a few number fragments in the dark layer highlighted in copper orange, conceptual editorial design, flat, precise --ar 2:3 --style raw</div>
+        <div class="prompt"><span class="tag">中文工具（即梦/通义万相）</span>书籍封面底图，画面水平分割为两个世界：上部55%为温暖的米色纸张质感配柔和光线，下部45%为深炭蓝色，密布微小的等宽字体数字与交易代码，底部渐隐入黑暗，两层之间由一条发光的细铜色接缝分隔，暗层中少数数字用铜橙色点亮，概念性编辑设计风格，扁平精确，比例 2:3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ D ═══════════ -->
+  <div class="proposal item">
+    <h2><span>方案 D</span>机器报价单</h2>
+    <p>第四章的意象：1861 年的价格标签，第二次被发明。细化：书名从签内移到签外——大字落在牛皮纸底上，缩略图可读性大幅提升；价签加了系绳和穿孔的内阴影，物感更实；字段区精简为三行，<code>reader: not human</code> 仍是题眼；$0.003 加大并收紧字距。</p>
+    <div class="proposal-grid">
+      <div>
+        <div class="cover c4">
+          <div class="tag">
+            <div class="string"></div>
+            <div class="hole"></div>
+            <div class="amount">
+              <div class="n">$0.003</div>
+              <div class="u">STABLECOIN · VALID 90S</div>
+            </div>
+            <div class="row"><span>status</span><b>402 Payment Required</b></div>
+            <div class="row"><span>reader</span><b>not human</b></div>
+            <div class="row" style="border-bottom:none"><span>signed</span><b>machine wallet</b></div>
+          </div>
+          <div class="below">
+            <div class="title">硅基经济学</div>
+            <div class="sub">□□□ 著 · THE SILICON ECONOMY</div>
+          </div>
+        </div>
+        <div class="thumb-note">书名移出价签后，缩略图下立即可读</div>
+      </div>
+      <div class="detail">
+        <h3>细化要点</h3>
+        <ul>
+          <li><b>新旧对撞</b>：价签的形制越古典（系绳、穿孔、圆角、微倾），里面的字段越冷（等宽字体、协议语言），张力越足</li>
+          <li><b>题眼</b>：<code>reader: not human</code>——这张价签不是给你看的，你只是恰好路过</li>
+          <li><b>书名外置</b>：解决初稿最大问题（签内书名在缩略图下过小），现在书名直接压在牛皮纸底上</li>
+        </ul>
+        <h3>生图提示词（底图，文字后期加）</h3>
+        <div class="prompt"><span class="tag">MIDJOURNEY / 通用英文</span>book cover background, one vintage kraft paper price tag with punched hole and thin string, slightly rotated, floating centered on warm manila-gold ground (#D3C093), soft realistic shadow, the tag surface clean and empty ready for text, subtle paper grain, still-life product photography lighting, lower third of canvas empty for title typography, nostalgic yet precise mood --ar 2:3 --style raw</div>
+        <div class="prompt"><span class="tag">中文工具（即梦/通义万相）</span>书籍封面底图，一张复古牛皮纸价格吊牌带穿孔和细绳，轻微倾斜，悬浮于暖金驼色背景中央，柔和真实的投影，吊牌表面留白待排字，细腻纸张纹理，静物摄影布光，画面下三分之一留白供书名排版，怀旧而精确的氛围，比例 2:3</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>提示词使用说明</b>：AI 生图工具对中文排版和小字段落的还原不可靠，所以四组提示词都只生成<b>无文字底图</b>，书名、字段、通知文案等在 Figma / Photoshop / 稿定设计中按本页版式后期叠加。若用 Midjourney，建议 <code>--ar 2:3</code> 出图后放大至 1600×2400；即梦、通义万相直接选 2:3 或 1024×1536 以上。方案 B 的通知文案与方案 D 的字段文本可直接从本页复制。
+  </div>
+</div>
+
+<script>
+  (function(){
+    var el = document.getElementById('stream');
+    var toks = ['0.003','402','¥0.01','sig:ok','0.0004','tx','0.005','paid','90s','usdc','0.001','ack'];
+    var out = [], n = 420;
+    for (var i=0;i<n;i++){
+      var t = toks[(i*7+3)%toks.length];
+      out.push(t==='402' || t==='¥0.01' ? '<b>'+t+'</b>' : t);
+    }
+    el.innerHTML = out.join(' · ');
+  })();
+</script>
