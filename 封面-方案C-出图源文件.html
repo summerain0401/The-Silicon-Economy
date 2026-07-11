@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>硅基经济学 · 封面终稿 C</title>
+<style>
+  *{margin:0; padding:0; box-sizing:border-box}
+  html,body{width:1600px; height:2400px; overflow:hidden}
+  body{ display:flex; flex-direction:column; background:#EFEAE2; }
+
+  /* ── 上层：碳基 ── */
+  .upper{
+    flex:1.15; padding:150px 140px 110px; color:#2B2822;
+    display:flex; flex-direction:column;
+    background:
+      radial-gradient(80% 60% at 20% 0%, rgba(255,255,255,.55), transparent 60%),
+      #EFEAE2;
+  }
+  .label-c{
+    font-family:"PingFang SC","Noto Sans SC",sans-serif;
+    font-size:38px; letter-spacing:.36em; color:#9B937F; font-weight:500;
+  }
+  .title{
+    font-family:"Songti SC","Noto Serif SC","STSong",serif;
+    font-size:295px; font-weight:900; letter-spacing:.08em;
+    line-height:1.26; margin-top:auto; color:#26231D;
+  }
+  .sub{
+    font-family:"PingFang SC","Noto Sans SC",sans-serif;
+    font-size:42px; color:#6E675A; margin-top:52px; letter-spacing:.06em;
+  }
+  .author{
+    font-family:"Songti SC","Noto Serif SC","STSong",serif;
+    font-size:52px; color:#4A443A; margin-top:34px; letter-spacing:.3em; font-weight:700;
+  }
+
+  /* ── 接缝 ── */
+  .seam{ height:8px; flex:none;
+    background:linear-gradient(90deg,#C87832 0%,#8A5220 55%,#C87832 100%);
+    box-shadow:0 0 40px rgba(200,120,50,.55);
+  }
+
+  /* ── 下层：硅基 ── */
+  .lower{
+    flex:1; background:#14181D; position:relative; overflow:hidden;
+    padding:96px 140px;
+  }
+  .stream{
+    font-family:"Menlo","SF Mono",monospace;
+    font-size:31px; line-height:2.18; color:#39434D;
+    word-break:break-all; user-select:none;
+  }
+  .stream b{ color:#C87832; font-weight:400 }
+  .label-s{
+    position:absolute; right:140px; bottom:100px; z-index:2;
+    font-family:"PingFang SC","Noto Sans SC",sans-serif;
+    font-size:38px; letter-spacing:.36em; color:#5A6670; font-weight:500;
+  }
+  .lower::after{
+    content:""; position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, rgba(20,24,29,0) 50%, rgba(20,24,29,.9) 100%);
+    pointer-events:none;
+  }
+</style>
+</head>
+<body>
+  <div class="upper">
+    <div class="label-c">碳基 · CARBON</div>
+    <div class="title">硅基<br>经济学</div>
+    <div class="sub">人类在上层过日子，机器在下层结算</div>
+    <div class="author">热夏老友 著</div>
+  </div>
+  <div class="seam"></div>
+  <div class="lower">
+    <div class="stream" id="stream"></div>
+    <div class="label-s">硅基 · SILICON</div>
+  </div>
+
+<script>
+  var el = document.getElementById('stream');
+  var toks = ['0.003','402','¥0.01','sig:ok','0.0004','tx','0.005','paid','90s','usdc','0.001','ack'];
+  var out = [], n = 620;
+  for (var i=0;i<n;i++){
+    var t = toks[(i*7+3)%toks.length];
+    out.push(t==='402' || t==='¥0.01' ? '<b>'+t+'</b>' : t);
+  }
+  el.innerHTML = out.join(' · ');
+</script>
+</body>
+</html>
