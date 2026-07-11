@@ -36,15 +36,33 @@ editorial book design, flat, precise, no people, no objects
 | 署名 | 热夏老友 著 | 宋体加粗，加宽字距 |
 | 右下角标签 | 硅基 · SILICON | 黑体，加宽字距，蓝灰 |
 
+## 字体（全部 OFL 开源协议，可商用，不入库）
+
+| 用途 | 字体 | 文件 |
+|---|---|---|
+| 书名/署名 | 思源宋体 Source Han Serif SC | SourceHanSerifSC-Heavy.otf / -Bold.otf |
+| 标签/副题 | 思源黑体 Source Han Sans SC | SourceHanSansSC-Medium.otf |
+| 交易流水 | JetBrains Mono | JetBrainsMono-Regular.ttf |
+
+字体文件体积大（共约 66MB）不入 git，复刻前先下载到源文件同目录的 `fonts/` 文件夹：
+
+```bash
+mkdir -p fonts && cd fonts
+curl -sSL -O "https://github.com/adobe-fonts/source-han-serif/raw/release/OTF/SimplifiedChinese/SourceHanSerifSC-Heavy.otf"
+curl -sSL -O "https://github.com/adobe-fonts/source-han-serif/raw/release/OTF/SimplifiedChinese/SourceHanSerifSC-Bold.otf"
+curl -sSL -O "https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Medium.otf"
+curl -sSL -O "https://github.com/JetBrains/JetBrainsMono/raw/master/fonts/ttf/JetBrainsMono-Regular.ttf"
+```
+
 ## 复刻 / 改版方法
 
-改文字或配色后重新出图，只需编辑 HTML 源文件并执行：
+改文字或配色后重新出图：编辑 HTML 源文件（需与 `fonts/` 同目录），然后执行：
 
 ```bash
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
   --headless=new --disable-gpu --hide-scrollbars \
   --window-size=1600,2400 \
   --screenshot=封面-方案C-1600x2400.png \
-  --virtual-time-budget=3000 \
+  --virtual-time-budget=5000 --allow-file-access-from-files \
   "file:///Volumes/Samsung/book/封面-方案C-出图源文件.html"
 ```

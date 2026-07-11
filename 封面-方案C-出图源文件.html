@@ -2,8 +2,34 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>硅基经济学 · 封面终稿 C</title>
+<title>硅基经济学 · 封面终稿 C（思源字体版）</title>
 <style>
+  /* 全部使用可商用开源字体：
+     思源宋体 Source Han Serif SC (OFL) — 书名/署名
+     思源黑体 Source Han Sans SC (OFL) — 标签/副题
+     JetBrains Mono (OFL) — 交易流水
+     字体文件置于同目录 fonts/ 下 */
+  @font-face{
+    font-family:"Source Han Serif SC";
+    src:url("fonts/SourceHanSerifSC-Heavy.otf") format("opentype");
+    font-weight:900;
+  }
+  @font-face{
+    font-family:"Source Han Serif SC";
+    src:url("fonts/SourceHanSerifSC-Bold.otf") format("opentype");
+    font-weight:700;
+  }
+  @font-face{
+    font-family:"Source Han Sans SC";
+    src:url("fonts/SourceHanSansSC-Medium.otf") format("opentype");
+    font-weight:500;
+  }
+  @font-face{
+    font-family:"JetBrains Mono";
+    src:url("fonts/JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight:400;
+  }
+
   *{margin:0; padding:0; box-sizing:border-box}
   html,body{width:1600px; height:2400px; overflow:hidden}
   body{ display:flex; flex-direction:column; background:#EFEAE2; }
@@ -17,20 +43,20 @@
       #EFEAE2;
   }
   .label-c{
-    font-family:"PingFang SC","Noto Sans SC",sans-serif;
-    font-size:38px; letter-spacing:.36em; color:#9B937F; font-weight:500;
+    font-family:"Source Han Sans SC",sans-serif; font-weight:500;
+    font-size:38px; letter-spacing:.36em; color:#9B937F;
   }
   .title{
-    font-family:"Songti SC","Noto Serif SC","STSong",serif;
+    font-family:"Source Han Serif SC",serif;
     font-size:295px; font-weight:900; letter-spacing:.08em;
     line-height:1.26; margin-top:auto; color:#26231D;
   }
   .sub{
-    font-family:"PingFang SC","Noto Sans SC",sans-serif;
+    font-family:"Source Han Sans SC",sans-serif; font-weight:500;
     font-size:42px; color:#6E675A; margin-top:52px; letter-spacing:.06em;
   }
   .author{
-    font-family:"Songti SC","Noto Serif SC","STSong",serif;
+    font-family:"Source Han Serif SC",serif;
     font-size:52px; color:#4A443A; margin-top:34px; letter-spacing:.3em; font-weight:700;
   }
 
@@ -46,15 +72,15 @@
     padding:96px 140px;
   }
   .stream{
-    font-family:"Menlo","SF Mono",monospace;
+    font-family:"JetBrains Mono",monospace; font-weight:400;
     font-size:31px; line-height:2.18; color:#39434D;
     word-break:break-all; user-select:none;
   }
   .stream b{ color:#C87832; font-weight:400 }
   .label-s{
     position:absolute; right:140px; bottom:100px; z-index:2;
-    font-family:"PingFang SC","Noto Sans SC",sans-serif;
-    font-size:38px; letter-spacing:.36em; color:#5A6670; font-weight:500;
+    font-family:"Source Han Sans SC",sans-serif; font-weight:500;
+    font-size:38px; letter-spacing:.36em; color:#5A6670;
   }
   .lower::after{
     content:""; position:absolute; inset:0; z-index:1;
