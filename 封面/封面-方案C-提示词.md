@@ -64,5 +64,5 @@ curl -sSL -O "https://github.com/JetBrains/JetBrainsMono/raw/master/fonts/ttf/Je
   --window-size=1600,2400 \
   --screenshot=封面-方案C-1600x2400.png \
   --virtual-time-budget=5000 --allow-file-access-from-files \
-  "file:///Volumes/Samsung/book/封面-方案C-出图源文件.html"
+  "file:///Volumes/Samsung/book/封面/封面-方案C-出图源文件.html"
 ```

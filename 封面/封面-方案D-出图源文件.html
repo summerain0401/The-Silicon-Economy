@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>硅基经济学 · 封面终稿 D（思源字体版）</title>
+<style>
+  /* 全部使用可商用开源字体（OFL）：
+     思源宋体 — 书名；思源黑体 — 副题署名行；JetBrains Mono — 价签字段 */
+  @font-face{
+    font-family:"Source Han Serif SC";
+    src:url("fonts/SourceHanSerifSC-Heavy.otf") format("opentype");
+    font-weight:900;
+  }
+  @font-face{
+    font-family:"Source Han Sans SC";
+    src:url("fonts/SourceHanSansSC-Medium.otf") format("opentype");
+    font-weight:500;
+  }
+  @font-face{
+    font-family:"JetBrains Mono";
+    src:url("fonts/JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight:400;
+  }
+
+  *{margin:0; padding:0; box-sizing:border-box}
+  html,body{width:1600px; height:2400px; overflow:hidden}
+  body{
+    display:flex; flex-direction:column; align-items:center;
+    background:radial-gradient(100% 80% at 50% 20%, #E2D3AF 0%, #D3C093 70%, #C6B180 100%);
+    padding:250px 0 185px;
+  }
+
+  /* ── 价签 ── */
+  .tag{
+    width:1120px; background:#F6EFDF; border-radius:26px;
+    padding:175px 110px 155px;
+    box-shadow:0 10px 28px rgba(60,45,15,.18), 0 48px 120px rgba(60,45,15,.28);
+    position:relative; transform:rotate(-2deg);
+  }
+  .string{
+    position:absolute; top:-215px; left:50%; width:5px; height:230px;
+    background:#A08A5C; transform-origin:bottom; transform:translateX(-50%) rotate(14deg);
+    border-radius:3px;
+  }
+  .hole{
+    width:52px; height:52px; border-radius:50%; background:#D3C093;
+    box-shadow:inset 0 4px 10px rgba(60,45,15,.4);
+    position:absolute; top:62px; left:50%; transform:translateX(-50%);
+  }
+  .amount{ text-align:center; padding:70px 0 125px; }
+  .amount .n{
+    font-family:"JetBrains Mono",monospace; font-size:225px; font-weight:400;
+    color:#2E2818; letter-spacing:-.02em;
+  }
+  .amount .u{
+    font-family:"JetBrains Mono",monospace; font-size:38px; color:#8C7F60;
+    letter-spacing:.24em; margin-top:32px;
+  }
+  .row{
+    display:flex; justify-content:space-between; gap:30px;
+    font-family:"JetBrains Mono",monospace; font-size:42px; color:#7A6E52;
+    padding:38px 0; border-bottom:3px dashed #CBBD97;
+  }
+  .row:last-child{ border-bottom:none }
+  .row b{ color:#3A3325; font-weight:400; text-align:right }
+
+  /* ── 签外书名区 ── */
+  .below{ margin-top:auto; text-align:center; }
+  .title{
+    font-family:"Source Han Serif SC",serif; font-size:188px; font-weight:900;
+    letter-spacing:.18em; color:#2E2818; text-indent:.18em;
+  }
+  .sub{
+    font-family:"Source Han Sans SC",sans-serif; font-weight:500;
+    font-size:43px; color:#776A4B; letter-spacing:.16em; margin-top:48px;
+  }
+</style>
+</head>
+<body>
+  <div class="tag">
+    <div class="string"></div>
+    <div class="hole"></div>
+    <div class="amount">
+      <div class="n">$0.003</div>
+      <div class="u">STABLECOIN · VALID 90S</div>
+    </div>
+    <div class="row"><span>status</span><b>402 Payment Required</b></div>
+    <div class="row"><span>reader</span><b>not human</b></div>
+    <div class="row"><span>signed</span><b>machine wallet</b></div>
+  </div>
+  <div class="below">
+    <div class="title">硅基经济学</div>
+    <div class="sub">热夏老友 著 · THE SILICON ECONOMY</div>
+  </div>
+</body>
+</html>
