@@ -1,3 +1,5 @@
+> 公开准备说明（2026-10-19）：以下记录保留当时的观察，但账户、应用、服务、订单标识和端点已替换；示例不可用于发起真实交易。历史提交仍须单独处理。
+
 # 第九章素材：支付宝 A2A 实录（2026-07-08）
 
 > 本文件是写作素材，不是正文。来源分三类，写作时注意语气：
@@ -15,13 +17,13 @@
   - 商户端：开通商户，在自己的 API 服务里集成收款逻辑（402 相关，"支付宝 AI 收"）
 - 尚无真实交易。付款账户与收款账户不能是同一人，故无法自我成交
 - 作者的直接判断（可作全章题眼）："相较于传统的网页支付、APP 支付，**感觉只是多了一种支付方式**"——小额度、法币结算、底层依托现有金融体系，是现有支付体系的延伸
-- 测试接口：`https://j4yqhsw95t.coze.site/api/top-websites`（作者自建，部署在 Coze 平台）
+- 测试接口：`https://example.invalid/api/top-websites`（作者自建，部署在 Coze 平台）
 
 ## 二、一次真实的、失败的机器支付（【实测】，全程发生于 2026-07-08 14:28-14:35 北京时间前后）
 
 ### 1. 撞墙：402 响应
 
-`GET https://j4yqhsw95t.coze.site/api/top-websites` 返回：
+`GET https://example.invalid/api/top-websites` 返回：
 
 ```
 HTTP/1.1 402 Payment Required
@@ -30,7 +32,7 @@ Payment-Needed: eyJwcm90b2NvbCI6...（base64，解码见下）
 via: n62-251-102.oversea-SG-SIN4.Creative
 
 {"code":"Payment-Needed","message":"Payment required to access this resource",
- "out_trade_no":"AIPAY_1783492083004_k7c8mr","amount":"0.01","currency":"CNY",
+ "out_trade_no":"REDACTED_ORDER_ID","amount":"0.01","currency":"CNY",
  "goods_name":"Top Websites Ranking Data"}
 ```
 
@@ -41,21 +43,21 @@ via: n62-251-102.oversea-SG-SIN4.Creative
 ```json
 {
   "protocol": {
-    "out_trade_no": "AIPAY_1783492083004_k7c8mr",
+    "out_trade_no": "REDACTED_ORDER_ID",
     "amount": "0.01",
     "currency": "CNY",
     "resource_id": "/api/top-websites",
     "pay_before": "2026-07-08T06:58:03+00:00",
-    "seller_signature": "grp9uZrR6LBE...（RSA2 签名，344 字符）",
+    "seller_signature": "REDACTED_SIGNATURE（原始 RSA2 签名未公开）",
     "seller_sign_type": "RSA2",
-    "seller_unique_id": "2088712479620020"
+    "seller_unique_id": "REDACTED_ACCOUNT_ID"
   },
   "method": {
-    "seller_name": "田某（真实姓名已隐去，正文中不得出现原名）",
-    "seller_id": "2088712479620020",
-    "seller_app_id": "2021006159618541",
+    "seller_name": "作者本人的商户账户（实名已隐去）",
+    "seller_id": "REDACTED_ACCOUNT_ID",
+    "seller_app_id": "REDACTED_ACCOUNT_ID",
     "goods_name": "Top Websites Ranking Data",
-    "service_id": "API_FFD69556183C45AE"
+    "service_id": "REDACTED_SERVICE_ID"
   }
 }
 ```
