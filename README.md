@@ -43,4 +43,4 @@ An independent Chinese-language manuscript exploring what changes when software 
 
 ## 权利与公开状态
 
-作者已选择将 14 篇正文的原创部分采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；适用文件、第三方材料排除与署名示例见 [LICENSE-SCOPE.md](LICENSE-SCOPE.md)，许可全文见 [LICENSE](LICENSE)。封面、字体、原始交易素材和开发辅助文件不自动纳入本次许可。书稿、封面、引文与素材的公开前核查见 [权利清单](docs/RIGHTS.md) 和 [公开准备报告](docs/PUBLIC_READINESS.md)。是否公开仓库由作者另行确认；合并本 PR 不代表同意公开。
+作者已选择将 14 篇正文的原创部分采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；适用文件、第三方材料排除与署名示例见 [LICENSE-SCOPE.md](LICENSE-SCOPE.md)，许可全文见 [LICENSE](LICENSE)。封面、字体、原始交易素材和开发辅助文件不自动纳入本次许可。书稿、封面、引文与素材的公开前核查见 [权利清单](docs/RIGHTS.md) 和 [公开准备报告](docs/PUBLIC_READINESS.md)。作者已于 2026-10-19 确认直接公开原仓库，并接受现有历史资料一并公开；本仓库现已公开。历史提交保留，当前版本的素材已脱敏。
