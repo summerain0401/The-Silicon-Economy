@@ -1,2 +1,7 @@
 .DS_Store
 *.swp
+
+.env
+.env.*
+.claude/settings*.json
+__pycache__/
