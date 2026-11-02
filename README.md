@@ -1,5 +1,7 @@
 # 硅基经济学 · The Silicon Economy
 
+[中文](README.md) | [English](README.en.md)
+
 **人类在上层过日子，机器在下层结算。**
 
 一部讨论 AI Agent 支付与机器经济的中文书稿，作者署名「热夏老友」。从 HTTP 402 与微支付出发，讨论机器可读报价、信用、市场结构、责任与监管。
