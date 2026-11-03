@@ -1,6 +1,6 @@
 # The Silicon Economy · 硅基经济学
 
-[中文](README.md) | [English](README.en.md)
+[English](README.md) | [简体中文](README.zh-CN.md)
 
 **People live upstairs. Machines settle downstairs.**
 

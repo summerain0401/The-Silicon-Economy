@@ -1,48 +1,42 @@
-# 硅基经济学 · The Silicon Economy
+# The Silicon Economy · 硅基经济学
 
-[中文](README.md) | [English](README.en.md)
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-**人类在上层过日子，机器在下层结算。**
+**People live upstairs. Machines settle downstairs.**
 
-一部讨论 AI Agent 支付与机器经济的中文书稿，作者署名「热夏老友」。从 HTTP 402 与微支付出发，讨论机器可读报价、信用、市场结构、责任与监管。
+A Chinese-language manuscript by 热夏老友 about AI-agent payments and the machine economy. Starting with HTTP 402 and micropayments, it examines machine-readable prices, credit, market structure, accountability, and regulation. It combines historical discussion, explicitly fictional scenarios, and dated observations; it is not a payment implementation or a claim of FLOP affiliation.
 
-An independent Chinese-language manuscript exploring what changes when software agents can request, price and pay for services. It combines historical discussion, explicitly fictional scenarios and dated observations. It is a research and writing project, not a payment implementation or a claim of FLOP affiliation.
+## Status and reading guide
 
-## 当前状态
+The first draft contains an introduction, twelve chapters, and an epilogue: 14 Markdown texts. The text was last revised on July 16, 2026; the prior repository preparation was dated October 19, 2026. Product experiences and regulatory discussion contain July 2026 snapshots, rather than newly verified current facts. The manuscript remains in Chinese; this page is its English navigation guide.
 
-首稿包含导论、十二章与尾声，共 14 篇 Markdown 正文。现有正文修订截至 2026-07-16；本次仓库整理日期为 2026-10-19。章节中的产品体验与监管讨论包含 2026 年 7 月的快照，不能当作今天已经复核的事实。
+| Chapter | Read |
+| --- | --- |
+| Introduction | [The day machines started spending for themselves](00-导论.md) |
+| 1 | [Thirty forgotten years of HTTP 402](01-第一章-被遗忘的30年.md) |
+| 2 | [Four payment revolutions](02-第二章-四次支付革命的共性.md) |
+| 3 | [Why stablecoins?](03-第三章-为什么是稳定币.md) |
+| 4 | [How a machine-readable quote introduces itself](04-第四章-一份报价单的自我介绍.md) |
+| 5 | [Credit without a credit history](05-第五章-没有征信记录的信用.md) |
+| 6 | [Markets without intermediaries](06-第六章-没有中间商的市场.md) |
+| 7 | [A compute-based unit of account](07-第七章-算力本位.md) |
+| 8 | [Machine credit](08-第八章-机器信用.md) |
+| 9 | [Microscopic autonomous markets](09-第九章-微观自治市场.md) |
+| 10 | [Who is responsible for overspending?](10-第十章-谁为超支负责.md) |
+| 11 | [The regulatory time gap](11-第十一章-监管的时差.md) |
+| 12 | [Carbon-silicon arbitrage](12-第十二章-碳硅套利.md) |
+| Epilogue | [Writing in the first year of the silicon economy](13-尾声-写在硅基经济学的元年.md) |
 
-## 阅读目录
+Start with the introduction for motivation, chapters 4 and 9 for pricing and market mechanisms, or chapters 10–12 for limits and accountability. Chapter 9 separates historical observations from projections; prepared source records are redacted and cannot be used for real payments.
 
-- [导论：机器开始为自己花钱的那一天](00-导论.md)
-- [第一章：被遗忘的三十年——HTTP 402 简史](01-第一章-被遗忘的30年.md)
-- [第二章：从刷卡到刷 Agent——四次支付革命的共性](02-第二章-四次支付革命的共性.md)
-- [第三章：为什么是稳定币，而不是法币或积分](03-第三章-为什么是稳定币.md)
-- [第四章：一份报价单的自我介绍——402 如何定价](04-第四章-一份报价单的自我介绍.md)
-- [第五章：没有征信记录的信用——钱包、额度与被倒转的信任](05-第五章-没有征信记录的信用.md)
-- [第六章：没有中间商的市场——Bazaar，以及中间商的第二次死亡](06-第六章-没有中间商的市场.md)
-- [第七章：算力本位——硅基经济需要锚定物吗](07-第七章-算力本位.md)
-- [第八章：机器信用——没有一个人类担保的信任体系](08-第八章-机器信用.md)
-- [第九章：微观自治市场——当交易颗粒度小到人类看不见](09-第九章-微观自治市场.md)
-- [第十章：谁为超支负责——自主性与责任的错位](10-第十章-谁为超支负责.md)
-- [第十一章：监管的时差——当交易发生在司法管辖之外](11-第十一章-监管的时差.md)
-- [第十二章：碳硅套利——当 Agent 比你更懂你的钱包](12-第十二章-碳硅套利.md)
-- [尾声：写在硅基经济学的元年](13-尾声-写在硅基经济学的元年.md)
+Related engineering experiment: [AiPayHub](https://github.com/summerain0401/AiPayHub). The manuscript's economic scenarios do not establish that the gateway implements on-chain payment, autonomous markets, or FLOP integration.
 
-## 从哪里开始
+## Repository and contributions
 
-- 想了解问题意识：从导论读起。
-- 关注接口和支付机制：读第四章的机器报价单与第九章的微观自治市场。第九章含历史实测与明确标出的推演；素材中的记录已做公开准备脱敏，不能用于真实支付。
-- 关注边界与风险：读第十至十二章。
+Read the numbered Markdown files directly on GitHub or in a local reader; no dependency installation or build is required. `封面/` contains two cover PNGs and layout sources. Fonts are not bundled. Outlines, source material, and revision notes document the writing process.
 
-相关工程探索：[AiPayHub](https://github.com/summerain0401/AiPayHub)。书稿的经济推演不代表该网关已经实现链上支付、自治市场或任何 FLOP 集成。
+For factual corrections, include the chapter, passage, verifiable primary source, and source date. Editorial suggestions may be submitted as issues or PRs. Redact material involving real participants before sharing it. Changes to the manuscript must follow the continuity and writing rules in [CLAUDE.md](CLAUDE.md).
 
-## 仓库结构与贡献
+## Rights and publication
 
-正文按 `00` 至 `13` 编号，可直接在 GitHub 或本地 Markdown 阅读器中打开，没有依赖安装或构建步骤。`封面/` 保存两套 PNG 与排版源文件；字体并未随仓库附带。其他大纲、素材和修订记录属于写作过程资料。
-
-事实勘误请提供章节、原文位置、可核对的一手来源和该来源的日期；编辑建议可开 issue 或 PR。涉及真实参与者的补充材料应先脱敏。正文改稿须遵守 `CLAUDE.md` 中的连续性与写作规范，本次整理未改动正文论述。
-
-## 权利与公开状态
-
-作者已选择将 14 篇正文的原创部分采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；适用文件、第三方材料排除与署名示例见 [LICENSE-SCOPE.md](LICENSE-SCOPE.md)，许可全文见 [LICENSE](LICENSE)。封面、字体、原始交易素材和开发辅助文件不自动纳入本次许可。书稿、封面、引文与素材的公开前核查见 [权利清单](docs/RIGHTS.md) 和 [公开准备报告](docs/PUBLIC_READINESS.md)。作者已于 2026-10-19 确认直接公开原仓库，并接受现有历史资料一并公开；本仓库现已公开。历史提交保留，当前版本的素材已脱敏。
+The original portions of the 14 main texts are licensed under [CC BY 4.0](LICENSE). See [LICENSE-SCOPE.md](LICENSE-SCOPE.md) for included files, excluded third-party material, and attribution examples. Covers, fonts, raw transaction materials, and development helpers are not automatically covered. See the [rights inventory](docs/RIGHTS.md) and [publication-preparation report](docs/PUBLIC_READINESS.md). The repository is public with its history retained; the October 19, 2026 publication decision and current-material redaction are documented in the Chinese README.
